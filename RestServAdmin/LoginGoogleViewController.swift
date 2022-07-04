@@ -25,13 +25,14 @@ extension IniciarSesionViewController: GIDSignInDelegate  {
                     print("Error because \(error.localizedDescription)")
                     return
                 }
+                if Auth.auth().currentUser != nil{
+                    print("Inicio de sesion exitosa")
+                    self.performSegue(withIdentifier: "iniciarSesionSegue", sender: nil)
+                }else{
+                    print("No hay usuario")
+                }
             }
-        if Auth.auth().currentUser != nil{
-            print("Inicio de sesion exitosa")
-            self.performSegue(withIdentifier: "iniciarSesionSegue", sender: nil)
-        }else{
-            print("No hay usuario")
-        }
+        
         
         }
     

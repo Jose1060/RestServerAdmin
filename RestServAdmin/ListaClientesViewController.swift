@@ -10,7 +10,7 @@ import FirebaseDatabase
 
 class ListaClientesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var clientes:[String] = []
+    var clientes:[Cliente] = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return clientes.count
@@ -18,7 +18,14 @@ class ListaClientesViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = clientes[indexPath.row]
+        
+        if(clientes.count == 0){
+            cell.textLabel?.text = "No hay pedidos :c"
+            return cell
+        }
+        
+        cell.textLabel?.text = clientes[indexPath.row].ID
+        
         return cell
     }
     
@@ -31,18 +38,31 @@ class ListaClientesViewController: UIViewController, UITableViewDelegate, UITabl
         listaClientes.dataSource = self
         listaClientes.delegate = self
         
-        let a = Database.database().reference().child("clientes").observe(DataEventType.childAdded, with: {(snapshot) in
+        Database.database().reference().child("clientes").observe(DataEventType.childAdded, with: {(snapshot) in
             print(snapshot.key)
             print("resultados")
-            self.clientes.append(snapshot.key)
+            let cliente = Cliente()
+            cliente.ID = snapshot.key
+            self.clientes.append(cliente)
             self.listaClientes.reloadData()
             })
-        print(a)
+        
+        Database.database().reference().child("clientes").observe(DataEventType.childRemoved, with: {(snapshot) in
+            var iterator = 0
+            for snap in self.clientes{
+                if snap.ID == snapshot.key{
+                    self.clientes.remove(at: iterator)
+                }
+                iterator += 1
+            }
+            self.listaClientes.reloadData()
+        })
         // Do any additional setup after loading the view.
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cliente = clientes[indexPath.row]
+        let cliente = clientes[indexPath.row].ID
+        
         performSegue(withIdentifier: "segueClientePedidos", sender: cliente)
     }
     

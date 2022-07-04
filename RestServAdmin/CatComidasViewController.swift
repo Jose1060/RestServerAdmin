@@ -33,6 +33,16 @@ class CatComidasViewController: UIViewController, UITableViewDelegate, UITableVi
             self.comidas.append(comida)
             self.listaComidas.reloadData()
         })
+        Database.database().reference().child("comidas").observe(DataEventType.childRemoved, with: {(snapshot) in
+            var iterator = 0
+            for snap in self.comidas{
+                if snap.ID == snapshot.key{
+                    self.comidas.remove(at: iterator)
+                }
+                iterator += 1
+            }
+            self.listaComidas.reloadData()
+        })
         // Do any additional setup after loading the view.
     }
     
@@ -56,19 +66,6 @@ class CatComidasViewController: UIViewController, UITableViewDelegate, UITableVi
                 (error) in
                 print("Se elimino la imagen correctamente")
             }
-            Database.database().reference().child("comidas").observe(DataEventType.childAdded, with: {(snapshot) in
-               print(snapshot)
-               print("resultados")
-               let comida = Comida()
-               comida.ID = snapshot.key
-               comida.Nombre = (snapshot.value as! NSDictionary)["nombre"] as! String
-               comida.Precio = (snapshot.value as! NSDictionary)["precio"] as! Double
-               comida.Tiempo = (snapshot.value as! NSDictionary)["tiempo"] as! Double
-               comida.Imagen = (snapshot.value as! NSDictionary)["imagen"] as! String
-                comida.ImagenID = (snapshot.value as! NSDictionary)["imagenID"] as! String
-               self.comidas.append(comida)
-               self.listaComidas.reloadData()
-           })
             
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

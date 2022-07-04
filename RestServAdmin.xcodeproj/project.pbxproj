@@ -12,6 +12,8 @@
 		B87930BD2872862F0059C0FB /* Bebida.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87930BC2872862F0059C0FB /* Bebida.swift */; };
 		B87930BF287287F50059C0FB /* ComidaVerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87930BE287287F50059C0FB /* ComidaVerViewController.swift */; };
 		B87930C128728E780059C0FB /* BebidasVerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87930C028728E780059C0FB /* BebidasVerViewController.swift */; };
+		B87930C428732D510059C0FB /* Pedido.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87930C328732D510059C0FB /* Pedido.swift */; };
+		B87930C6287332310059C0FB /* Cliente.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87930C5287332310059C0FB /* Cliente.swift */; };
 		B8CE696528714BB8007D1736 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE696428714BB8007D1736 /* AppDelegate.swift */; };
 		B8CE696728714BB8007D1736 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE696628714BB8007D1736 /* SceneDelegate.swift */; };
 		B8CE696928714BB8007D1736 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE696828714BB8007D1736 /* ViewController.swift */; };
@@ -38,6 +40,8 @@
 		B87930BC2872862F0059C0FB /* Bebida.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bebida.swift; sourceTree = "<group>"; };
 		B87930BE287287F50059C0FB /* ComidaVerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComidaVerViewController.swift; sourceTree = "<group>"; };
 		B87930C028728E780059C0FB /* BebidasVerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BebidasVerViewController.swift; sourceTree = "<group>"; };
+		B87930C328732D510059C0FB /* Pedido.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pedido.swift; sourceTree = "<group>"; };
+		B87930C5287332310059C0FB /* Cliente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cliente.swift; sourceTree = "<group>"; };
 		B8CE696128714BB8007D1736 /* RestServAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestServAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8CE696428714BB8007D1736 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8CE696628714BB8007D1736 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 			children = (
 				B87930BA2872861D0059C0FB /* Comida.swift */,
 				B87930BC2872862F0059C0FB /* Bebida.swift */,
+				B87930C328732D510059C0FB /* Pedido.swift */,
+				B87930C5287332310059C0FB /* Cliente.swift */,
 			);
 			path = Modelos;
 			sourceTree = "<group>";
@@ -277,6 +283,7 @@
 			files = (
 				B8CE697C28714F92007D1736 /* PedidosUsuariosViewController.swift in Sources */,
 				B8CE696928714BB8007D1736 /* ViewController.swift in Sources */,
+				B87930C6287332310059C0FB /* Cliente.swift in Sources */,
 				B8CE6984287153FE007D1736 /* CrearComidaBebidaViewController.swift in Sources */,
 				B8CE698228715282007D1736 /* CatBebidasViewController.swift in Sources */,
 				B8CE697E28714FCE007D1736 /* CategoriasViewController.swift in Sources */,
@@ -288,6 +295,7 @@
 				B8CE698C28720349007D1736 /* IniciarSesionViewController.swift in Sources */,
 				B87930BD2872862F0059C0FB /* Bebida.swift in Sources */,
 				B8CE6994287209D8007D1736 /* LoginGoogleViewController.swift in Sources */,
+				B87930C428732D510059C0FB /* Pedido.swift in Sources */,
 				B8CE69802871526E007D1736 /* CatComidasViewController.swift in Sources */,
 				B8CE696728714BB8007D1736 /* SceneDelegate.swift in Sources */,
 				B87930C128728E780059C0FB /* BebidasVerViewController.swift in Sources */,

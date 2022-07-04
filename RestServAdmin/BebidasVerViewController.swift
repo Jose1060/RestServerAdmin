@@ -6,24 +6,27 @@
 //
 
 import UIKit
+import SDWebImage
 
 class BebidasVerViewController: UIViewController {
-
+    var bebida = Bebida()
+    
+    
+    @IBOutlet weak var nombreText: UITextField!
+    @IBOutlet weak var precioText: UITextField!
+    @IBOutlet weak var TiempoText: UITextField!
+    @IBOutlet weak var imagenView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        nombreText.text = bebida.Nombre
+        precioText.text = String(bebida.Precio)
+        TiempoText.text = String(bebida.Tiempo)
+        imagenView.sd_setImage(with: URL(string: bebida.Imagen), completed : nil)
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

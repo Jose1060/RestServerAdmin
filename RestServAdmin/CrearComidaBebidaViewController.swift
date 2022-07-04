@@ -31,6 +31,16 @@ class CrearComidaBebidaViewController: UIViewController, UIImagePickerController
     }
     
     @IBAction func guardarTapped(_ sender: Any) {
+        
+        if (imagenImg.image == nil || tipoText.text == "" || nombreText.text == "" || precioText.text == "" || tiempoText.text == ""){
+            let alertaVC = UIAlertController(title: "Campos sin llenar", message: "Por favor llene todos los capos", preferredStyle: .alert)
+            let okAccion = UIAlertAction(title: "Atrapar", style: .default, handler: nil)
+            alertaVC.addAction(okAccion)
+        
+            self.present(alertaVC, animated: true, completion: nil)
+            return
+        }
+        
         let imagenesFolder = Storage.storage().reference().child(tipoText.text!)
         let imagenData = imagenImg.image?.jpegData(compressionQuality: 0.50)
         let cargarImagen = imagenesFolder.child("\(imagenID).jpg")

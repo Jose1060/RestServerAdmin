@@ -10,18 +10,27 @@ import FirebaseDatabase
 
 class PedidosUsuariosViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (pedidos.count == 0){
+            return 1
+        }
         return pedidos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = pedidos[indexPath.row]
+        print(pedidos.count, "-------------------")
+        if (pedidos.count == 0){
+            cell.textLabel?.text = "No hay pedido 🥲"
+            return cell
+        }
+        
+        cell.textLabel?.text = pedidos[indexPath.row].Nombre
         return cell
     }
     
     
     var cliente = ""
-    var pedidos:[String] = []
+    var pedidos:[Pedido] = []
     
     @IBOutlet weak var listaPedidos: UITableView!
     
@@ -30,15 +39,40 @@ class PedidosUsuariosViewController: UIViewController,UITableViewDelegate,UITabl
         listaPedidos.dataSource = self
         listaPedidos.delegate = self
         
-        let a = Database.database().reference().child("clientes").child(cliente).child("pedidos").observe(DataEventType.childAdded, with: {(snapshot) in
+         Database.database().reference().child("clientes").child(cliente).child("pedidos").observe(DataEventType.childAdded, with: {(snapshot) in
             print(snapshot.key)
-            print("resultados")
-            let pedidos = (snapshot.value as! NSDictionary)["nombre"] as! String
-            self.pedidos.append(pedidos)
+            print("resultados", snapshot)
+            let pedido = Pedido()
+             pedido.ID = snapshot.key
+             pedido.Precio = (snapshot.value as! NSDictionary)["precio"] as! Double
+             pedido.Tiempo = (snapshot.value as! NSDictionary)["tiempo"] as! Double
+             pedido.Nombre = (snapshot.value as! NSDictionary)["nombre"] as! String
+            self.pedidos.append(pedido)
             self.listaPedidos.reloadData()
             })
-        print(a)
+        
+        Database.database().reference().child("clientes").child(cliente).child("pedidos").observe(DataEventType.childRemoved, with: {(snapshot) in
+            var iterator = 0
+            for snap in self.pedidos{
+                if snap.ID == snapshot.key{
+                    self.pedidos.remove(at: iterator)
+                }
+                iterator += 1
+            }
+            self.listaPedidos.reloadData()
+        })
         // Do any additional setup after loading the view.
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            let pedido = pedidos[indexPath.row]
+            
+            Database.database().reference().child("clientes").child(cliente).child("pedidos").child(pedido.ID).removeValue()
+            
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
     }
     
 
