@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>369624136731-dove0cp4pthknel1ins3bp0a99u63veh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.369624136731-dove0cp4pthknel1ins3bp0a99u63veh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD9GtZ87gDnsaLxZMVlxoh-deZ6F1EQSe0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>369624136731</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Jose.RestServAdmin</string>
+	<key>PROJECT_ID</key>
+	<string>restserv-cd72b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>restserv-cd72b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:369624136731:ios:4fd364b1ef76c68f90ccbe</string>
+	<key>DATABASE_URL</key>
+	<string>https://restserv-cd72b-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E9759E389C2ED821AFD38BC /* Pods_RestServAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E75AC09F7F3DCEF1E0059A5 /* Pods_RestServAdmin.framework */; };
+		B87930BB2872861D0059C0FB /* Comida.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87930BA2872861D0059C0FB /* Comida.swift */; };
+		B87930BD2872862F0059C0FB /* Bebida.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87930BC2872862F0059C0FB /* Bebida.swift */; };
+		B87930BF287287F50059C0FB /* ComidaVerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87930BE287287F50059C0FB /* ComidaVerViewController.swift */; };
+		B87930C128728E780059C0FB /* BebidasVerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87930C028728E780059C0FB /* BebidasVerViewController.swift */; };
+		B8CE696528714BB8007D1736 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE696428714BB8007D1736 /* AppDelegate.swift */; };
+		B8CE696728714BB8007D1736 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE696628714BB8007D1736 /* SceneDelegate.swift */; };
+		B8CE696928714BB8007D1736 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE696828714BB8007D1736 /* ViewController.swift */; };
+		B8CE696C28714BB8007D1736 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8CE696A28714BB8007D1736 /* Main.storyboard */; };
+		B8CE696F28714BB8007D1736 /* RestServAdmin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8CE696D28714BB8007D1736 /* RestServAdmin.xcdatamodeld */; };
+		B8CE697128714BBA007D1736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8CE697028714BBA007D1736 /* Assets.xcassets */; };
+		B8CE697428714BBA007D1736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8CE697228714BBA007D1736 /* LaunchScreen.storyboard */; };
+		B8CE697C28714F92007D1736 /* PedidosUsuariosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE697B28714F92007D1736 /* PedidosUsuariosViewController.swift */; };
+		B8CE697E28714FCE007D1736 /* CategoriasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE697D28714FCE007D1736 /* CategoriasViewController.swift */; };
+		B8CE69802871526E007D1736 /* CatComidasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE697F2871526E007D1736 /* CatComidasViewController.swift */; };
+		B8CE698228715282007D1736 /* CatBebidasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE698128715282007D1736 /* CatBebidasViewController.swift */; };
+		B8CE6984287153FE007D1736 /* CrearComidaBebidaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE6983287153FE007D1736 /* CrearComidaBebidaViewController.swift */; };
+		B8CE698A2871F5D6007D1736 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8CE69892871F5D6007D1736 /* GoogleService-Info.plist */; };
+		B8CE698C28720349007D1736 /* IniciarSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE698B28720349007D1736 /* IniciarSesionViewController.swift */; };
+		B8CE6994287209D8007D1736 /* LoginGoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE6993287209D8007D1736 /* LoginGoogleViewController.swift */; };
+		B8CE699628722C97007D1736 /* ListaClientesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE699528722C97007D1736 /* ListaClientesViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1E75AC09F7F3DCEF1E0059A5 /* Pods_RestServAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestServAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34068F5D01E41C5BBCD3D766 /* Pods-RestServAdmin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestServAdmin.debug.xcconfig"; path = "Target Support Files/Pods-RestServAdmin/Pods-RestServAdmin.debug.xcconfig"; sourceTree = "<group>"; };
+		9B7F15236E26C338BD517052 /* Pods-RestServAdmin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestServAdmin.release.xcconfig"; path = "Target Support Files/Pods-RestServAdmin/Pods-RestServAdmin.release.xcconfig"; sourceTree = "<group>"; };
+		B87930BA2872861D0059C0FB /* Comida.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comida.swift; sourceTree = "<group>"; };
+		B87930BC2872862F0059C0FB /* Bebida.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bebida.swift; sourceTree = "<group>"; };
+		B87930BE287287F50059C0FB /* ComidaVerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComidaVerViewController.swift; sourceTree = "<group>"; };
+		B87930C028728E780059C0FB /* BebidasVerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BebidasVerViewController.swift; sourceTree = "<group>"; };
+		B8CE696128714BB8007D1736 /* RestServAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestServAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8CE696428714BB8007D1736 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B8CE696628714BB8007D1736 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B8CE696828714BB8007D1736 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B8CE696B28714BB8007D1736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B8CE696E28714BB8007D1736 /* RestServAdmin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RestServAdmin.xcdatamodel; sourceTree = "<group>"; };
+		B8CE697028714BBA007D1736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B8CE697328714BBA007D1736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B8CE697528714BBA007D1736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8CE697B28714F92007D1736 /* PedidosUsuariosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedidosUsuariosViewController.swift; sourceTree = "<group>"; };
+		B8CE697D28714FCE007D1736 /* CategoriasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasViewController.swift; sourceTree = "<group>"; };
+		B8CE697F2871526E007D1736 /* CatComidasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatComidasViewController.swift; sourceTree = "<group>"; };
+		B8CE698128715282007D1736 /* CatBebidasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBebidasViewController.swift; sourceTree = "<group>"; };
+		B8CE6983287153FE007D1736 /* CrearComidaBebidaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearComidaBebidaViewController.swift; sourceTree = "<group>"; };
+		B8CE69892871F5D6007D1736 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B8CE698B28720349007D1736 /* IniciarSesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IniciarSesionViewController.swift; sourceTree = "<group>"; };
+		B8CE6993287209D8007D1736 /* LoginGoogleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginGoogleViewController.swift; sourceTree = "<group>"; };
+		B8CE699528722C97007D1736 /* ListaClientesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaClientesViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B8CE695E28714BB8007D1736 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E9759E389C2ED821AFD38BC /* Pods_RestServAdmin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23142D9ED4E5AF0E7F0554DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34068F5D01E41C5BBCD3D766 /* Pods-RestServAdmin.debug.xcconfig */,
+				9B7F15236E26C338BD517052 /* Pods-RestServAdmin.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B87930B9287285E20059C0FB /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				B87930BA2872861D0059C0FB /* Comida.swift */,
+				B87930BC2872862F0059C0FB /* Bebida.swift */,
+			);
+			path = Modelos;
+			sourceTree = "<group>";
+		};
+		B8CE695828714BB8007D1736 = {
+			isa = PBXGroup;
+			children = (
+				B8CE696328714BB8007D1736 /* RestServAdmin */,
+				B8CE696228714BB8007D1736 /* Products */,
+				23142D9ED4E5AF0E7F0554DD /* Pods */,
+				CDE08C658B31B0746158C55F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B8CE696228714BB8007D1736 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8CE696128714BB8007D1736 /* RestServAdmin.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8CE696328714BB8007D1736 /* RestServAdmin */ = {
+			isa = PBXGroup;
+			children = (
+				B87930B9287285E20059C0FB /* Modelos */,
+				B8CE696428714BB8007D1736 /* AppDelegate.swift */,
+				B8CE696628714BB8007D1736 /* SceneDelegate.swift */,
+				B8CE696828714BB8007D1736 /* ViewController.swift */,
+				B8CE696A28714BB8007D1736 /* Main.storyboard */,
+				B8CE697028714BBA007D1736 /* Assets.xcassets */,
+				B8CE697228714BBA007D1736 /* LaunchScreen.storyboard */,
+				B8CE697528714BBA007D1736 /* Info.plist */,
+				B8CE696D28714BB8007D1736 /* RestServAdmin.xcdatamodeld */,
+				B8CE697B28714F92007D1736 /* PedidosUsuariosViewController.swift */,
+				B8CE697D28714FCE007D1736 /* CategoriasViewController.swift */,
+				B8CE697F2871526E007D1736 /* CatComidasViewController.swift */,
+				B8CE698128715282007D1736 /* CatBebidasViewController.swift */,
+				B8CE6983287153FE007D1736 /* CrearComidaBebidaViewController.swift */,
+				B8CE69892871F5D6007D1736 /* GoogleService-Info.plist */,
+				B8CE698B28720349007D1736 /* IniciarSesionViewController.swift */,
+				B8CE6993287209D8007D1736 /* LoginGoogleViewController.swift */,
+				B8CE699528722C97007D1736 /* ListaClientesViewController.swift */,
+				B87930BE287287F50059C0FB /* ComidaVerViewController.swift */,
+				B87930C028728E780059C0FB /* BebidasVerViewController.swift */,
+			);
+			path = RestServAdmin;
+			sourceTree = "<group>";
+		};
+		CDE08C658B31B0746158C55F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E75AC09F7F3DCEF1E0059A5 /* Pods_RestServAdmin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B8CE696028714BB8007D1736 /* RestServAdmin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8CE697828714BBA007D1736 /* Build configuration list for PBXNativeTarget "RestServAdmin" */;
+			buildPhases = (
+				2AAF198F0B49F0729989527A /* [CP] Check Pods Manifest.lock */,
+				B8CE695D28714BB8007D1736 /* Sources */,
+				B8CE695E28714BB8007D1736 /* Frameworks */,
+				B8CE695F28714BB8007D1736 /* Resources */,
+				8C9D3A81CDB6D184D76E6F5E /* [CP] Embed Pods Frameworks */,
+				5D0C795650AB1E85BD0D178F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RestServAdmin;
+			productName = RestServAdmin;
+			productReference = B8CE696128714BB8007D1736 /* RestServAdmin.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B8CE695928714BB8007D1736 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					B8CE696028714BB8007D1736 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = B8CE695C28714BB8007D1736 /* Build configuration list for PBXProject "RestServAdmin" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B8CE695828714BB8007D1736;
+			productRefGroup = B8CE696228714BB8007D1736 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8CE696028714BB8007D1736 /* RestServAdmin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B8CE695F28714BB8007D1736 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8CE697428714BBA007D1736 /* LaunchScreen.storyboard in Resources */,
+				B8CE698A2871F5D6007D1736 /* GoogleService-Info.plist in Resources */,
+				B8CE697128714BBA007D1736 /* Assets.xcassets in Resources */,
+				B8CE696C28714BB8007D1736 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2AAF198F0B49F0729989527A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RestServAdmin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D0C795650AB1E85BD0D178F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RestServAdmin/Pods-RestServAdmin-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RestServAdmin/Pods-RestServAdmin-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RestServAdmin/Pods-RestServAdmin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C9D3A81CDB6D184D76E6F5E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RestServAdmin/Pods-RestServAdmin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RestServAdmin/Pods-RestServAdmin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RestServAdmin/Pods-RestServAdmin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B8CE695D28714BB8007D1736 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8CE697C28714F92007D1736 /* PedidosUsuariosViewController.swift in Sources */,
+				B8CE696928714BB8007D1736 /* ViewController.swift in Sources */,
+				B8CE6984287153FE007D1736 /* CrearComidaBebidaViewController.swift in Sources */,
+				B8CE698228715282007D1736 /* CatBebidasViewController.swift in Sources */,
+				B8CE697E28714FCE007D1736 /* CategoriasViewController.swift in Sources */,
+				B8CE699628722C97007D1736 /* ListaClientesViewController.swift in Sources */,
+				B87930BF287287F50059C0FB /* ComidaVerViewController.swift in Sources */,
+				B87930BB2872861D0059C0FB /* Comida.swift in Sources */,
+				B8CE696F28714BB8007D1736 /* RestServAdmin.xcdatamodeld in Sources */,
+				B8CE696528714BB8007D1736 /* AppDelegate.swift in Sources */,
+				B8CE698C28720349007D1736 /* IniciarSesionViewController.swift in Sources */,
+				B87930BD2872862F0059C0FB /* Bebida.swift in Sources */,
+				B8CE6994287209D8007D1736 /* LoginGoogleViewController.swift in Sources */,
+				B8CE69802871526E007D1736 /* CatComidasViewController.swift in Sources */,
+				B8CE696728714BB8007D1736 /* SceneDelegate.swift in Sources */,
+				B87930C128728E780059C0FB /* BebidasVerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B8CE696A28714BB8007D1736 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8CE696B28714BB8007D1736 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B8CE697228714BBA007D1736 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8CE697328714BBA007D1736 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B8CE697628714BBA007D1736 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B8CE697728714BBA007D1736 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B8CE697928714BBA007D1736 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34068F5D01E41C5BBCD3D766 /* Pods-RestServAdmin.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RestServAdmin/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jose.RestServAdmin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B8CE697A28714BBA007D1736 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B7F15236E26C338BD517052 /* Pods-RestServAdmin.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RestServAdmin/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jose.RestServAdmin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B8CE695C28714BB8007D1736 /* Build configuration list for PBXProject "RestServAdmin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8CE697628714BBA007D1736 /* Debug */,
+				B8CE697728714BBA007D1736 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8CE697828714BBA007D1736 /* Build configuration list for PBXNativeTarget "RestServAdmin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8CE697928714BBA007D1736 /* Debug */,
+				B8CE697A28714BBA007D1736 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B8CE696D28714BB8007D1736 /* RestServAdmin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B8CE696E28714BB8007D1736 /* RestServAdmin.xcdatamodel */,
+			);
+			currentVersion = B8CE696E28714BB8007D1736 /* RestServAdmin.xcdatamodel */;
+			path = RestServAdmin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B8CE695928714BB8007D1736 /* Project object */;
+}
