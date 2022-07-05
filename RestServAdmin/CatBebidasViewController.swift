@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseStorage
 import FirebaseDatabase
+import SDWebImage
 
 class CatBebidasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
@@ -49,9 +50,13 @@ class CatBebidasViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celda = UITableViewCell()
-        let comida = bebidas[indexPath.row]
-        celda.textLabel?.text = comida.Nombre
+        let celda = tableView.dequeueReusableCell(withIdentifier: "bebidaCelda", for: indexPath)
+        let bebida = bebidas[indexPath.row]
+        celda.textLabel?.text = bebida.Nombre
+        celda.detailTextLabel?.text = "S/. " + String(bebida.Precio)
+        
+        celda.imageView?.sd_setImage(with: URL(string: bebida.Imagen), placeholderImage: UIImage(named: "pastel"), completed : nil)
+
         return celda
     }
     

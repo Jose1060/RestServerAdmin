@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class ListaClientesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -31,6 +32,17 @@ class ListaClientesViewController: UIViewController, UITableViewDelegate, UITabl
     
 
     @IBOutlet weak var listaClientes: UITableView!
+    
+    
+    @IBAction func salirTapped(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+            dismiss(animated: true)
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

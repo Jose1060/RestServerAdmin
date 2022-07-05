@@ -34,7 +34,7 @@ class CrearComidaBebidaViewController: UIViewController, UIImagePickerController
         
         if (imagenImg.image == nil || tipoText.text == "" || nombreText.text == "" || precioText.text == "" || tiempoText.text == ""){
             let alertaVC = UIAlertController(title: "Campos sin llenar", message: "Por favor llene todos los capos", preferredStyle: .alert)
-            let okAccion = UIAlertAction(title: "Atrapar", style: .default, handler: nil)
+            let okAccion = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alertaVC.addAction(okAccion)
         
             self.present(alertaVC, animated: true, completion: nil)
@@ -64,6 +64,20 @@ class CrearComidaBebidaViewController: UIViewController, UIImagePickerController
                         let snap = ["nombre": self.nombreText.text!, "precio" : Float(self.precioText.text!), "tiempo" : Float(self.tiempoText.text!), "imagen": url?.absoluteString ?? "none", "imagenID" : self.imagenID] as [String : Any]
                         Database.database().reference().child(self.tipoText.text!).childByAutoId().setValue(snap)
                         print(snap)
+                        let alertaVC = UIAlertController(title: "Subida con exito", message: "¿Deseas seguir agregando productos o salir? ", preferredStyle: .alert)
+                        let okAccion = UIAlertAction(title: "Si", style: .default, handler: {(action) in
+                            self.nombreText.text = ""
+                            self.precioText.text = ""
+                            self.tiempoText.text = ""
+                            self.imagenImg.image = nil
+                        })
+                        let salirAccion = UIAlertAction(title: "No salir, gracias", style: .default, handler: {(action) in
+                            self.dismiss(animated: true)
+                        })
+                        alertaVC.addAction(salirAccion)
+                        alertaVC.addAction(okAccion)
+                    
+                        self.present(alertaVC, animated: true, completion: nil)
                     }
                     
                 })

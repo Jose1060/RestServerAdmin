@@ -12,20 +12,29 @@ class PedidosUsuariosViewController: UIViewController,UITableViewDelegate,UITabl
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (pedidos.count == 0){
             return 1
+        }else{
+            return pedidos.count
         }
-        return pedidos.count
+        
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "pedidoCelda", for: indexPath)
         print(pedidos.count, "-------------------")
+        
         if (pedidos.count == 0){
             cell.textLabel?.text = "No hay pedido 🥲"
             return cell
+        }else{
+            
+            let pedido = pedidos[indexPath.row]
+            cell.textLabel?.text = pedido.Nombre
+            cell.detailTextLabel?.text = "S/. " + String(pedido.Precio)
+            
+            return cell
         }
-        
-        cell.textLabel?.text = pedidos[indexPath.row].Nombre
-        return cell
+
     }
     
     
